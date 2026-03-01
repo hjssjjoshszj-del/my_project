@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger🔥 - Best Burgers in Town</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Fayl -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="logo-icon">🍔</span>
+                    <span class="logo-text">Burger<span class="logo-highlight">🔥</span></span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Cart Icon -->
+                <div class="cart-icon-container">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+                
+                <!-- Hamburger Menu (Mobile) -->
+                <button class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-up">
+                    Best <span class="text-highlight">Burger</span> In Town
+                </h1>
+                <p class="hero-subtitle animate-fade-up-delay">
+                    Fresh ingredients, juicy patties, and irresistible flavors that will make your taste buds dance!
+                </p>
+                <button class="btn btn-primary animate-fade-up-delay-2" id="orderBtn">
+                    Order Now <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delicious Burger" class="burger-img floating">
+                <div class="hero-bg-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="text-highlight">Menu</span></h2>
+                <p class="section-subtitle">Handcrafted burgers made with love and premium ingredients</p>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Burger 1 -->
+                <div class="menu-card">
+                    <div class="card-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq2vVVGWx1u0-2Q7QB7FR1t3cdS28oX5FN3w&s" alt="Classic Cheeseburger">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Classic Cheeseburger</h3>
+                        <p class="card-description">Juicy beef patty with melted cheese, fresh lettuce, tomato, and our special sauce.</p>
+                        <div class="card-footer">
+                            <span class="card-price">$9.99</span>
+                            <button class="btn btn-card add-to-cart" 
+        data-id="classic-cheeseburger" 
+        data-item="Classic Cheeseburger" 
+        data-price="9.99">
+    <i class="fas fa-plus"></i> Add to Cart
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Burger 2 -->
+                <div class="menu-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BBQ Bacon Burger">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">BBQ Bacon Burger</h3>
+                        <p class="card-description">Smoky BBQ sauce, crispy bacon, cheddar cheese, and onion rings on a brioche bun.</p>
+                        <div class="card-footer">
+                            <span class="card-price">$12.99</span>
+                           <button class="btn btn-card add-to-cart" 
+        data-id="bbq-bacon" 
+        data-item="BBQ Bacon Burger" 
+        data-price="12.99">
+    <i class="fas fa-plus"></i> Add to Cart
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Burger 3 -->
+                <div class="menu-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Veggie Delight">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Veggie Delight</h3>
+                        <p class="card-description">Grilled veggie patty with avocado, spinach, tomato, and garlic aioli sauce.</p>
+                        <div class="card-footer">
+                            <span class="card-price">$10.99</span>
+                            <button class="btn btn-card add-to-cart" 
+        data-id="veggie-delight" 
+        data-item="Veggie Delight" 
+        data-price="10.99">
+    <i class="fas fa-plus"></i> Add to Cart
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Burger 4 -->
+                <div class="menu-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Double Trouble">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Double Trouble</h3>
+                        <p class="card-description">Two beef patties, double cheese, bacon, and all the fixings for the hungry ones.</p>
+                        <div class="card-footer">
+                            <span class="card-price">$15.99</span>
+                            <button class="btn btn-card add-to-cart" 
+        data-id="double-trouble" 
+        data-item="Double Trouble" 
+        data-price="15.99">
+    <i class="fas fa-plus"></i> Add to Cart
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Burger 5 -->
+                <div class="menu-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Spicy Chicken">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Spicy Chicken</h3>
+                        <p class="card-description">Crispy spicy chicken fillet with jalapeños, ranch sauce, and fresh lettuce.</p>
+                        <div class="card-footer">
+                            <span class="card-price">$11.99</span>
+                            <button class="btn btn-card add-to-cart" 
+        data-id="spicy-chicken" 
+        data-item="Spicy Chicken" 
+        data-price="11.99">
+    <i class="fas fa-plus"></i> Add to Cart
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Burger 6 -->
+                <div class="menu-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mushroom Swiss">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mushroom Swiss</h3>
+                        <p class="card-description">Beef patty with sautéed mushrooms, Swiss cheese, and truffle aioli sauce.</p>
+                        <div class="card-footer">
+                            <span class="card-price">$13.99</span>
+                            <button class="btn btn-card add-to-cart" 
+        data-id="mushroom-swiss" 
+        data-item="Mushroom Swiss" 
+        data-price="13.99">
+    <i class="fas fa-plus"></i> Add to Cart
+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-content slide-left">
+                <h2 class="section-title">About <span class="text-highlight">Us</span></h2>
+                <p class="about-text">
+                    Since 2010, Burger🔥 has been serving the most delicious, juicy burgers in town. 
+                    We believe in using only the freshest ingredients, sourced locally whenever possible.
+                </p>
+                <p class="about-text">
+                    Our secret? A special blend of spices, perfectly grilled patties, and buns baked 
+                    fresh daily. Every burger is made to order, ensuring maximum flavor and satisfaction.
+                </p>
+                <p class="about-text">
+                    Come visit us and experience the burger revolution! We're not just a restaurant, 
+                    we're a community of burger lovers.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3 class="stat-number">10+</h3>
+                        <p class="stat-text">Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3 class="stat-number">50K+</h3>
+                        <p class="stat-text">Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3 class="stat-number">100+</h3>
+                        <p class="stat-text">Burger Varieties</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image slide-right">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burger Restaurant Interior">
+                <div class="about-bg-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact <span class="text-highlight">Us</span></h2>
+                <p class="section-subtitle">Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Burger Street, Food City, FC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@burgerfire.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Mon-Sun: 11:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i> Message sent successfully!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-modal-content">
+        <div class="cart-modal-header">
+            <h2>Your Cart</h2>
+            <button class="close-modal" id="closeCartModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItemsContainer">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add some delicious burgers to get started!</p>
+            </div>
+        </div>
+        
+        <div class="cart-summary" id="cartSummary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" id="continueShopping">Continue Shopping</button>
+                <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🍔</span>
+                        <span class="logo-text">Burger<span class="logo-highlight">🔥</span></span>
+                    </a>
+                    <p class="footer-text">Serving the best burgers since 2010. Fresh ingredients, amazing flavors.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p class="footer-text">Stay updated with our latest offers and new menu items!</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Burger🔥. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span>Item added to cart!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Fayl -->
+    <script src="script.js"></script>
+</body>
+</html>
